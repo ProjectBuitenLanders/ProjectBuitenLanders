@@ -13,11 +13,30 @@
             color: #333;
         }
         header {
-            background-color: #6a994e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+        background-image: url(img/img1p1.jpg);
+        background-size: cover;
+        background-position: 0px -300px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    header h1, header p {
+        position: relative;
+        z-index: 2;
+    }
         nav {
             display: flex;
             justify-content: center;
@@ -60,6 +79,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Welkom bij De Keelhoeve</h1>
         <p>Boerderij feestjes, workshops, en meer!</p>
